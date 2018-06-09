@@ -4,7 +4,7 @@ defmodule Elixbwe.Application.Exercise.ExerciseService do
   def get_random(nrOfExercises) do
     exercises = Repo.all(Elixbwe.Domain.Model.Exercise)
                 |> Repo.preload(:tags)
-    exercises
+    Enum.take_random(exercises, nrOfExercises)
   end
 
 end
