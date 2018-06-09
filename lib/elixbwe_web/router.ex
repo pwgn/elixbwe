@@ -21,6 +21,7 @@ defmodule ElixbweWeb.Router do
 
   scope "/api", ElixbweWeb do
     pipe_through :api
-    get "/tags", TagsController, :index
+    get "/tags", TagsController, :get_all
+    get "/tags/:id", TagsController, :get_by_id
   end
 end
