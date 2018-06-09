@@ -13,12 +13,6 @@ defmodule ElixbweWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", ElixbweWeb do
-    pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
-  end
-
   scope "/api", ElixbweWeb do
     pipe_through :api
 
