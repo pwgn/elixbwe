@@ -21,7 +21,13 @@ defmodule ElixbweWeb.Router do
 
   scope "/api", ElixbweWeb do
     pipe_through :api
+
+    # Tags api
     get "/tags", TagsController, :get_all
     get "/tags/:id", TagsController, :get_by_id
+
+    # Exercises api
+    get "/exercises/random", ExercisesController, :get_randoms
+
   end
 end
