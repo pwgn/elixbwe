@@ -1,5 +1,21 @@
 # Elixbwe
 
+## About
+
+Simple body-weight exercise random generator. Generate a set of random exercises to perform.
+
+`Elixbwe.Application.Exercise.DailyExercisesGeneratorWorker` is currently configured to generate a new daily schedule every 5 seconds. This is for testing purposes.
+
+## REST Api
+
+```
+GET api/exercises/random - Generates four random exercises.
+
+GET api/exercises/daily - Returns the daily exercises.
+```
+
+## Run
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
