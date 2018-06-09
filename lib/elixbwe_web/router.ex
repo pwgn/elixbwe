@@ -28,6 +28,7 @@ defmodule ElixbweWeb.Router do
 
     # Exercises api
     get "/exercises/random", ExercisesController, :get_randoms
+    get "/exercises/daily", ExercisesController, :get_daily
 
   end
 end

@@ -7,4 +7,9 @@ defmodule ElixbweWeb.ExercisesController do
     json conn, exercises
   end
 
+  def get_daily(conn, _params) do
+    exercises = ExerciseService.get_daily()
+    json conn, exercises
+  end
+
 end

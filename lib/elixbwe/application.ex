@@ -12,8 +12,8 @@ defmodule Elixbwe.Application do
       supervisor(Elixbwe.Repo, []),
       # Start the endpoint when the application starts
       supervisor(ElixbweWeb.Endpoint, []),
-      # Start your own worker by calling: Elixbwe.Worker.start_link(arg1, arg2, arg3)
-      # worker(Elixbwe.Worker, [arg1, arg2, arg3]),
+
+      worker(Elixbwe.Application.Exercise.DailyExercisesGeneratorWorker, []),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
